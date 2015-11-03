@@ -1,0 +1,9 @@
+$("form input")  form后所有后代元素可以是多个    （可以差几个辈分）                  （后代元素）
+
+$("form>input")   在form下匹配所有的子input  （只差一个辈分）                        （子元素）
+
+
+
+$("form + input") 紧接着form后的同辈input标签   虽然返回的是集合元素但最多只有一个   （同辈元素）
+
+$("form ~input")  在form后面匹配所有的同辈input标签                                  （同辈元素）
