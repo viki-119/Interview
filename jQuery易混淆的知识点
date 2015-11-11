@@ -11,4 +11,13 @@ $("form ~input")  在form后面匹配所有的同辈input标签                 
 闭包：
 http://www.jb51.net/article/24101.htm
 
+function test(){
+  var name="xxx ";
+  return function(){
+    return name;
+  }
+}
+var getName=test();
+getName();
+
 链式作用域
