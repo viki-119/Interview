@@ -8,18 +8,3 @@ $("form + input") 紧接着form后的同辈input标签   虽然返回的是集�
 
 $("form ~input")  在form后面匹配所有的同辈input标签                               （同辈元素）
 
-闭包：
-http://www.jb51.net/article/24101.htm
-
-http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html
-
-function test(){
-  var name="xxx ";
-  return function(){
-    return name;
-  }
-}
-var getName=test();
-getName();
-
-链式作用域
