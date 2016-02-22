@@ -70,6 +70,18 @@ https://github.com/viki-119/JS/blob/master/js%E4%B8%AD%E2%80%9C%3D%3D%E2%80%9D%E
 	else {//IE浏览器 
 		window.event.cancelBubble = true; 
 	} 
+	js阻止冒泡：
+	//阻止事件冒泡
+	function stopEventBubble(event){
+		var e=event || window.event;
+		
+		if (e && e.stopPropagation){
+		    e.stopPropagation();    
+		}
+		else{
+		    e.cancelBubble=true;
+		}
+	}
       
       js阻止默认行为:w3c的方法是e.preventDefault()，IE则是使用window.event.returnValue = false;
 	<ul onclick="alert('ul')" id="ul">
