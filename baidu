@@ -49,5 +49,34 @@ https://github.com/viki-119/JS/blob/master/js%E4%B8%AD%E2%80%9C%3D%3D%E2%80%9D%E
 8.如果在元素节点内定义了样式，但是想在css样式里让节点内定义的样式失效；
 
 9.事件冒泡： http://caibaojian.com/javascript-stoppropagation-preventdefault.html
-
-
+      js阻止冒泡：w3c的方法是e.stopPropagation()，IE则是使用window.event.cancelBubble = true
+      <ul onclick="alert('ul')" id="ul">
+		<li id="li">click me</li>
+		<li>click me</li>
+	</ul>
+	<script>
+      	var _li=document.getElementById('li');
+      	_li.onclick=function(){
+      		window.event? window.event.cancelBubble = true : e.stopPropagation();
+      		alert('li')
+      	}
+      </script>
+      
+      js阻止默认行为:w3c的方法是e.preventDefault()，IE则是使用window.event.returnValue = false;
+	<ul onclick="alert('ul')" id="ul">
+      	<li id="li">click me</li>
+      	<li>click me</li>
+      	<a href="http://caibaojian.com/" id="testA" >caibaojian.com</a>
+	</ul>
+      <script>
+      	var a = document.getElementById("testA");
+      	a.onclick =function(e){
+      		if(e.preventDefault){
+      			e.preventDefault();
+      		}else{
+      			window.event.returnValue = false;
+      		}
+      	}
+      </script>
+      
+      javascript的return false只会阻止默认行为，而是用jQuery的话则既阻止默认行为又防止对象冒泡。
