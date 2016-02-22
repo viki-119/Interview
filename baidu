@@ -48,4 +48,6 @@ https://github.com/viki-119/JS/blob/master/js%E4%B8%AD%E2%80%9C%3D%3D%E2%80%9D%E
 
 8.如果在元素节点内定义了样式，但是想在css样式里让节点内定义的样式失效；
 
+9.事件冒泡： http://caibaojian.com/javascript-stoppropagation-preventdefault.html
+
 
