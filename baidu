@@ -106,4 +106,5 @@ https://github.com/viki-119/JS/blob/master/js%E4%B8%AD%E2%80%9C%3D%3D%E2%80%9D%E
       
       javascript的return false只会阻止默认行为，而是用jQuery的话则既阻止默认行为又防止对象冒泡。
       
-     
+9.relative与absolute的区别
+http://www.cnblogs.com/jenry/archive/2007/07/15/818660.html
