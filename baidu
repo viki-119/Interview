@@ -111,3 +111,15 @@ http://www.cnblogs.com/jenry/archive/2007/07/15/818660.html
 
 10.::after与:after的区别
 http://www.webhek.com/after-before/
+
+11.input 标签都有哪些类型
+button
+checkbox
+file
+hidden
+image
+password
+radio
+reset
+submit
+text
