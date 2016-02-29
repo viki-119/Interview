@@ -114,12 +114,13 @@ http://www.webhek.com/after-before/
 
 11.input 标签都有哪些类型
 button
-checkbox
-file
-hidden
-image
-password
 radio
+checkbox
+text
+password
 reset
 submit
-text
+hidden
+image
+file
+range
