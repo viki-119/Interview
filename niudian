@@ -1,0 +1,15 @@
+http://zhidao.baidu.com/link?url=zBRGLszzd7s7B-C8yNYCk6y03GJ63rlp-Wte27GdYiEeARCrLSSkcsNhKf4WV5lK2UeVJHgzghELVjsKJbtU9K
+
+第二题：请说明要输出正确的myName的值要如何修改程序?并解释原因
+foo = function(){
+    this.myName = "Foo function.";
+}
+foo.prototype.sayHello = function(){
+    alert(this.myName);
+}
+foo.prototype.bar = function(){
+    setTimeout(this.sayHello, 1000);
+}
+var f = new foo;
+f.bar();
+
