@@ -13,3 +13,23 @@ foo.prototype.bar = function(){
 var f = new foo;
 f.bar();
 
+解决方法：
+<script>
+    foo=function(){
+        this.myName="ssss";
+    }
+
+    foo.prototype.sayHello=function(){
+        console.log(this.myName);
+    }
+
+    foo.prototype.bar=function(){
+        setTimeout(function (self) {
+            return function () {
+                self.sayHello();
+            }
+        }(this),7000)
+    }
+    var f=new foo;
+    f.bar()
+</script>
