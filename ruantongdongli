@@ -1,0 +1,18 @@
+1.监听事件两种方法之间的区别：
+第一种方法会引发重写的问题，会执行重写后的方法，只执行一次。
+第二种方法addEventListener（），添加多少个监听，就会执行多少次。
+<script>
+    window.onload=function(){
+        alert("a")
+    }
+    window.onload=function(){
+        alert("b")
+    }
+    
+    window.addEventListener("load", function () {
+        alert("c")
+    })
+    window.addEventListener("load", function () {
+        alert("d")
+    })
+</script>
