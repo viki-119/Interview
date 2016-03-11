@@ -1,6 +1,8 @@
-1.事件驱动
+1.事件驱动：（与批处理相对应）
       http://zhidao.baidu.com/question/272868397.html?fr=iks&word=js%CA%C2%BC%FE%C7%FD%B6%AF&ie=gbk
 2.float
+	应用场景：先设置父元素的宽和高，然后让子元素在父元素里向左或者向右浮动。
+	缺点：不能居中浮动；
 
 3.吸顶  ：https://github.com/viki-119/JS/blob/master/%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C
 
