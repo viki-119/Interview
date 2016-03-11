@@ -1,9 +1,8 @@
 1.jsonp 跨域请求  ：http://www.cnblogs.com/mahatmasmile/archive/2013/03/29/2989505.html
 
 
-2.call 与apply 
-
-
+2.call() 与apply()
+http://uule.iteye.com/blog/1158829
 
 3.requireJs
 
@@ -16,3 +15,6 @@
 
 
 6.前端自动化：
+
+
+7.闭包的优缺点：
