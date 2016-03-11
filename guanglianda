@@ -23,3 +23,84 @@ http://zhidao.baidu.com/link?url=5T2XTRDFHiSdGfgrw6tY0bA2ES1jGuU
 
 
 7.闭包的优缺点：
+
+闭包：
+http://www.jb51.net/article/24101.htm
+
+http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html
+
+闭包的使用场景：http://www.cnblogs.com/star-studio/archive/2011/06/22/2086493.html
+1.使用闭包代替全局变量
+2.函数外或在其他函数中访问某一函数内部的参数
+3.在函数执行之前为要执行的函数提供具体参数
+4.在函数执行之前为函数提供只有在函数执行或引用时才能知道的具体参数
+5.为节点循环绑定click事件，在事件函数中使用当次循环的值或节点，而不是最后一次循环的值或节点
+6.暂停执行
+7.包装相关功能
+
+<input type='button' id='b1' value="b1"/>
+<input type='button' id='b2' value="b2"/> 
+<input type='button' id='b3' value="b3"/>
+上面3个button，功能一样——每当被点击，就alert出自己目前为止一共被点击了多少次； 
+那么这个记录点击次数的变量放在哪里？这3个button的功能完全一样，事件函数可以写成一个，
+但却需要分别设立变量来存储自己被点击了多少次，那么这个时候闭包的作用就来了：
+把他们的事件监听函数设置为同一个函数的闭包，这样一来3个button的点击次数就独立变化了，
+且没有全局变量产生； 
+    function genCount(){  
+        var i = 0;  
+        return function(){  
+            i++;  
+            alert(i) ; 
+        }  
+    }  
+    function genCount2(){  
+        var i = 0;  
+        return function(){  
+            i++;  
+            return i; 
+        }  
+    } 
+    var a = genCount();  
+    var b = genCount();  
+    var c = genCount2();  
+    document.getElementById("b1").addEventListener("click",function(){
+        a();
+    })
+    document.getElementById("b2").onclick=function(){
+        b();
+    };
+    document.getElementById("b3").onclick=function(){
+        var _c=c();
+        console.log(_c);
+    };
+闭包示例1：
+function test(){
+var name="xxx ";
+return function(){
+return name;
+}
+}
+var getName=test();
+getName();
+
+闭包示例2：
+function say667() {
+// Local variable that ends up within closure
+var num = 666;
+var ttt= function() { alert(num); }
+num++;
+return ttt;
+}
+var sayAlert = say667();
+sayAlert();
+闭包的示例3：
+function a(){
+var i=0;
+function b(){
+alert(i);
+}
+return b;
+}
+var c = a();
+c();
+链式作用域
