@@ -142,7 +142,7 @@ http://zhidao.baidu.com/question/69984464.html?qbl=relate_question_3&word=absolu
 10.::after与:after的区别
 http://www.webhek.com/after-before/
 
-11.input 标签都有哪些类型
+11.input 标签都有哪些类型（粗略估计11个）
 button
 radio
 checkbox
@@ -154,6 +154,18 @@ hidden
 image
 file
 range
+
+<input type="button" value="button"><br>
+<input type="radio" value="radio">radio<br>
+<input type="checkbox" value="checkbox">checkbox<br>
+<input type="text" value="text"><br>
+<input type="password" ><br>
+<input type="reset"><br>
+<input type="submit"><br>
+<input type="hidden"><br>
+<input type="image"><br>
+<input type="file"><br>
+<input type="range"><br>
 
 12.事件的继承：
 如果在父元素上写了一个点击事件，那么子元素会继承父元素的事件；
