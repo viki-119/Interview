@@ -113,19 +113,21 @@ https://github.com/viki-119/JS/blob/master/js%E4%B8%AD%E2%80%9C%3D%3D%E2%80%9D%E
 9.relative与absolute的区别
 http://www.cnblogs.com/jenry/archive/2007/07/15/818660.html
 
-参考的坐标不一样，absolute是绝对定位，以设置了position属性且position属性为absolute或者为relative的父元素（left=0;top=0）为参考点；
-relative是以上一个同级元素为参考点，
+参考的坐标不一样，absolute是绝对定位，以设置了position属性且position属性为absolute或者为relative的父元素为参考点；
+relative是以上一个同级元素为参考点；（生成相对定位的元素，相对于其正常位置进行定位。）因此"left:20" 会向元素的 LEFT 位置添加 20 像素。
 http://zhidao.baidu.com/question/564383015.html
 
 父元素是相对定位，子元素的绝对定位就相对于父元素来定位；absolute 要与top left 配合使用才好。
 
 http://zhidao.baidu.com/question/69984464.html?qbl=relate_question_3&word=absolute%D3%EBrelative%B5%C4%C7%F8%B1%F0
 解释：
-1.绝对定位就是相对于父元素的定位，不受父元素内其他子元素的影响；子元素的绝对定位是相对于父元素来定位。
+1.绝对定位就是相对于父元素的定位，不受父元素内其他子元素的影响；
+	（子元素的绝对定位是相对于父元素来定位。）
    且这里指的父元素是设置了position属性且position属性为relative或者absolute的父元素，如果没有这样的父元素，则相对于屏幕的左上方(0,0)
    处定位。top left
-2.而相对定位是相对于同级元素的定位，也就是上一个同级元素；与margin配合使用时比较不错的选择；
+2.而相对定位是相对于同级元素的定位，也就是上一个同级元素；（与margin配合使用时比较不错的选择；）
 （即把下一个同级元素的position设置为relative；则该元素就会相对于上一个同级元素定位）
+ 即相对于其自身正常位置进行定位
     <style>
         #zzdivId{height:500px;width:300px;background: yellow;}
         #fdivId{margin:20px;height:200px;width:300px;background: red;}
