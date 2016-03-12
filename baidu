@@ -54,6 +54,20 @@ https://github.com/viki-119/JS/blob/master/js%E4%B8%AD%E2%80%9C%3D%3D%E2%80%9D%E
 
 9.事件冒泡： http://caibaojian.com/javascript-stoppropagation-preventdefault.html
 	http://www.cnblogs.com/vnii/archive/2011/12/19/2293311.html
+	
+	<ul>
+	    <li>1test</li>
+	    <li>2test</li>
+	    <li>3test</li>
+	    <li>4test</li>
+	    <li>5test</li>
+	</ul>
+	<script>
+	  $("ul li").click(function(){
+	      alert($(this).html());
+	  })
+	</script>
+	
       js阻止冒泡：w3c的方法是e.stopPropagation()，IE则是使用window.event.cancelBubble = true
       <ul onclick="alert('ul')" id="ul">
 		<li id="li">click me</li>
