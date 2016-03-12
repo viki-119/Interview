@@ -29,6 +29,15 @@ http://zhidao.baidu.com/link?url=5T2XTRDFHiSdGfgrw6tY0bA2ES1jGuU
 
 
 7.前端自动化：
+    yeoman  bower  grunt
+    yeoman的作用：在web项目的立项阶段，使用yeoman来生成项目的文件，代码结构；
+    yeoman自动将最佳实践和工具整合进来，大大加速和方便了我们后续的开发；生成器角色
+    
+    bower是一个web的包管理器；
+    
+    yeoman把grunt应用于生成的项目中
+    grunt：三个基本概念 Task，Target，Options
+    
 
 8.闭包的优缺点：
 
