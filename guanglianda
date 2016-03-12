@@ -37,9 +37,14 @@ http://zhidao.baidu.com/link?url=5T2XTRDFHiSdGfgrw6tY0bA2ES1jGuU
     
     yeoman把grunt应用于生成的项目中
     grunt：三个基本概念 Task，Target，Options
-    
+  
+8.angularJs中的双向数据绑定是如何实现的
+http://sentsin.com/web/779.html
 
-8.闭包的优缺点：
+AngularJS在$scope变量中使用脏值检查来实现了数据双向绑定。
+和Ember.js数据双向绑定中动态设施setter和getter不同，脏治检查允许AngularJS监视那些存在或者不存在的变量。
+
+9.闭包的优缺点：
 
 闭包：
 http://www.jb51.net/article/24101.htm
