@@ -110,14 +110,23 @@ https://github.com/viki-119/JS/blob/master/js%E4%B8%AD%E2%80%9C%3D%3D%E2%80%9D%E
       
       javascript的return false只会阻止默认行为，而是用jQuery的话则既阻止默认行为又防止对象冒泡。
       
-9.relative与absolute的区别
+9.relative与absolute的区别？      ~~~~~~~ absolute  relative  fixed  static  （inherit这个属性可以忽略）
+~~Static：静态定位。如果你没有设置position属性，那么缺省就是static。top，right，bottom，left等属性；
+	在static的情况下是无效的，要使用这些属性，必须把position设置为其他三个值之一。
+~~Fixed：固定定位。元素将被设置在浏览器上一个固定位置上，不会随其他元素滚动。
+	形象点说，上下拉动滚动条的时候，fixed的元素在屏幕上的位置不变。需要注意的是IE6并不支持此属性。
+
 http://www.cnblogs.com/jenry/archive/2007/07/15/818660.html
 
 参考的坐标不一样，absolute是绝对定位，以设置了position属性且position属性为absolute或者为relative的父元素为参考点；
-relative是以上一个同级元素为参考点；（生成相对定位的元素，相对于其正常位置进行定位。）因此"left:20" 会向元素的 LEFT 位置添加 20 像素。
+relative是以上一个同级元素为参考点；（生成相对定位的元素，相对于其正常位置进行定位。）因此"left:20" 会向元素的 left 位置添加 20 像素。
 http://zhidao.baidu.com/question/564383015.html
 
 父元素是相对定位，子元素的绝对定位就相对于父元素来定位；absolute 要与top left 配合使用才好。
+应用场景：很多网页都是居中的，这样，当对元素进行绝对定位的时候，在不同的分辨率下显示会有偏差；这时，我们可以通过类似下面的方法来处理：
+<div style="position: relative; margin:0 auto;width:100px">1
+    <div style="position: absolute; top: 10px; left: 10px;">2</div>
+</div>
 
 http://zhidao.baidu.com/question/69984464.html?qbl=relate_question_3&word=absolute%D3%EBrelative%B5%C4%C7%F8%B1%F0
 解释：
@@ -128,12 +137,12 @@ http://zhidao.baidu.com/question/69984464.html?qbl=relate_question_3&word=absolu
 2.而相对定位是相对于同级元素的定位，也就是上一个同级元素；（与margin配合使用时比较不错的选择；）
 （即把下一个同级元素的position设置为relative；则该元素就会相对于上一个同级元素定位）
  即相对于其自身正常位置进行定位：http://www.w3school.com.cn/cssref/pr_class_position.asp
-    <style>
-        #zzdivId{height:500px;width:300px;background: yellow;}
-        #fdivId{margin:20px;height:200px;width:300px;background: red;}
-        #zdivId1{height:100px;width:50px;background: blue;}
-        #zdivId2{height:100px;width:50px;background: green;position: relative;margin:-100px 0 0 50px;}
-    </style>
+	<style>
+		#zzdivId{height:500px;width:300px;background: yellow;}
+		#fdivId{margin:20px;height:200px;width:300px;background: red;}
+		#zdivId1{height:100px;width:50px;background: blue;}
+		#zdivId2{height:100px;width:50px;background: green;position: relative;margin:-100px 0 0 50px;}
+	</style>
 	<div id="zzdivId">
 	    <div id="fdivId">
 	        <div id="zdivId1">1</div>
