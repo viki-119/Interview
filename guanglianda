@@ -1,13 +1,13 @@
 1.jsonp 跨域请求  ：http://www.cnblogs.com/mahatmasmile/archive/2013/03/29/2989505.html
 
+2.css中的优先级：
 
-2.call() 与apply()
-http://uule.iteye.com/blog/1158829
+http://www.cnblogs.com/xugang/archive/2010/09/24/1833760.html
 
-http://blog.csdn.net/myhahaxiao/article/details/6952321
+http://zhidao.baidu.com/link?url=SQ180yU59LDhFd8XUOKVH-_fKha_DPfKiTdNb5KlVMtmJ8A0CqUjR18sAOzwKFLHfMAoyyVAtiGlTBO4uw3vv_
 
-http://zhidao.baidu.com/link?url=5T2XTRDFHiSdGfgrw6tY0bA2ES1jGuU
-5RQIJhbepFvbFa_pXcH9dVf_0FBfTedDE2q9GPxL-aklsAkLM7PO461Kv8eXyipOlWtUAimelbva
+https://segmentfault.com/a/1190000000453851
+
 
 3.requireJs
 
@@ -17,37 +17,43 @@ http://zhidao.baidu.com/link?url=5T2XTRDFHiSdGfgrw6tY0bA2ES1jGuU
     
     http://bbs.csdn.net/topics/390749797
 
-
 5.js中的继承：
 
+6.call() 与apply()
+http://uule.iteye.com/blog/1158829
 
-6.前端自动化：
+http://blog.csdn.net/myhahaxiao/article/details/6952321
+
+http://zhidao.baidu.com/link?url=5T2XTRDFHiSdGfgrw6tY0bA2ES1jGuU
+5RQIJhbepFvbFa_pXcH9dVf_0FBfTedDE2q9GPxL-aklsAkLM7PO461Kv8eXyipOlWtUAimelbva
 
 
-7.闭包的优缺点：
+7.前端自动化：
+
+8.闭包的优缺点：
 
 闭包：
 http://www.jb51.net/article/24101.htm
 
 http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html
 
-闭包的使用场景：http://www.cnblogs.com/star-studio/archive/2011/06/22/2086493.html
-1.使用闭包代替全局变量
-2.函数外或在其他函数中访问某一函数内部的参数
-3.在函数执行之前为要执行的函数提供具体参数
-4.在函数执行之前为函数提供只有在函数执行或引用时才能知道的具体参数
-5.为节点循环绑定click事件，在事件函数中使用当次循环的值或节点，而不是最后一次循环的值或节点
-6.暂停执行
-7.包装相关功能
+    闭包的使用场景：http://www.cnblogs.com/star-studio/archive/2011/06/22/2086493.html
+    1.使用闭包代替全局变量
+    2.函数外或在其他函数中访问某一函数内部的参数
+    3.在函数执行之前为要执行的函数提供具体参数
+    4.在函数执行之前为函数提供只有在函数执行或引用时才能知道的具体参数
+    5.为节点循环绑定click事件，在事件函数中使用当次循环的值或节点，而不是最后一次循环的值或节点
+    6.暂停执行
+    7.包装相关功能
 
-<input type='button' id='b1' value="b1"/>
-<input type='button' id='b2' value="b2"/> 
-<input type='button' id='b3' value="b3"/>
-上面3个button，功能一样——每当被点击，就alert出自己目前为止一共被点击了多少次； 
-那么这个记录点击次数的变量放在哪里？这3个button的功能完全一样，事件函数可以写成一个，
-但却需要分别设立变量来存储自己被点击了多少次，那么这个时候闭包的作用就来了：
-把他们的事件监听函数设置为同一个函数的闭包，这样一来3个button的点击次数就独立变化了，
-且没有全局变量产生； 
+    <input type='button' id='b1' value="b1"/>
+    <input type='button' id='b2' value="b2"/> 
+    <input type='button' id='b3' value="b3"/>
+    上面3个button，功能一样——每当被点击，就alert出自己目前为止一共被点击了多少次； 
+    那么这个记录点击次数的变量放在哪里？这3个button的功能完全一样，事件函数可以写成一个，
+    但却需要分别设立变量来存储自己被点击了多少次，那么这个时候闭包的作用就来了：
+    把他们的事件监听函数设置为同一个函数的闭包，这样一来3个button的点击次数就独立变化了，
+    且没有全局变量产生； 
     function genCount(){  
         var i = 0;  
         return function(){  
