@@ -143,17 +143,9 @@ http://zhidao.baidu.com/question/69984464.html?qbl=relate_question_3&word=absolu
 http://www.webhek.com/after-before/
 
 11.input 标签都有哪些类型（粗略估计11个）
-button
-radio
-checkbox
-text
-password
-reset
-submit
-hidden
-image
-file
-range
+button     radio     checkbox     text
+password   reset     submit       hidden
+image      file      range
 
 <input type="button" value="button"><br>
 <input type="radio" value="radio">radio<br>
