@@ -6,9 +6,10 @@
   至于边界(margin)则说明盒子摆放的时候的不能全部堆在一起，要留一定空隙保持通风，同时也为了方便取出。
   
 2.如何用js给dom添加样式：
-  ~~~给内部样式表添加样式js：*  document.styleSheets[0].addRule("#id1","color:blue");
+  ~~~给样式表（包括内部样式和外部样式）添加样式js：*  document.styleSheets[0].addRule("#id1","color:blue");
                             *   var cssStr="#id1 {color:green;}";
                                 document.styleSheets.item(document.styleSheets.length-1).cssText=cssStr;//ie好用 其他不好用
-  ~~~使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","iii");
+  ~~~使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class2");
+  
   
   
