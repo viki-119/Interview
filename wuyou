@@ -11,10 +11,14 @@
         *  document.styleSheets[0].addRule("#id1","color:blue");
         *   var cssStr="#id1 {color:green;}";
             document.styleSheets.item(document.styleSheets.length-1).cssText=cssStr;//ie好用 其他不好用
-        *调用方法： 改变className     document.getElementById('id1').className="test"; 
-        *改变直接样式:   document.getElementById('id1').style.backgroundColor="red";
+    ~~~改变class的名字  
+        *调用方法： 改变className     document.getElementById('id1').className="class2"; 
+         使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class3");同上
+         
+    ~~~改变内联样式直接样式   
+        *改变内联样式直接样式:document.getElementById('id1').style.backgroundColor="red";
 
-    ~~~使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class2");
+  二、全局改变样式 
   
   
   
