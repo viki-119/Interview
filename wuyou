@@ -66,6 +66,9 @@
         </script>
         
       ~~~prototype是什么含义？
+          prototype 属性使您有能力向对象添加属性和方法。http://www.w3school.com.cn/jsref/jsref_prototype_array.asp
+          http://zhidao.baidu.com/link?url=QR2HDpZgifwdGh24lmcBEGl8B_JXX93rOtKPtY23zcstEuMyL-AwNtqZ6iIPNGgFQfcnnVvOqMIRiGiM4eVWD_
+          
           javascript中的每个对象都有prototype属性，Javascript中对象的prototype属性的解释是：返回对象类型原型的引用。
           A.prototype = new B();
           理解prototype不应把它和继承混淆。A的prototype为B的一个实例，可以理解A将B中的方法和属性全部克隆了一遍。
