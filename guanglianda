@@ -3,6 +3,62 @@
 2.css中的优先级：
 
 http://www.cnblogs.com/xugang/archive/2010/09/24/1833760.html
+~~多重样式（Multiple Styles）：如果外部样式、内部样式和内联样式同时应用于同一个元素，就是使多重样式的情况。
+    一般情况下，优先级如下：
+    （内联样式）Inline style>（内部样式）Internal style sheet >（外部样式）External style sheet 
+    有个例外的情况，就是如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。
+    <head>
+        <style type="text/css">
+          /* 内部样式 */
+          h3{color:green;}
+        </style>
+        <!-- 外部样式 style.css -->
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <!-- 设置：h3{color:blue;} -->
+    </head>
+    <body>
+        <h3>测试！</h3>
+    </body>
+    
+ ~~选择器的优先权
+    * 内联样式表的权值最高 1000
+    * ID 选择器的权值为 100
+    * Class 类选择器的权值为 10
+    * HTML 标签选择器的权值为 1
+    利用选择器的权值进行计算比较，示例如下：
+    <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        #redP p {
+            /* 权值 = 100+1=101 */
+            color:#F00;  /* 红色 */
+        }
+        #redP .red em {
+            /* 权值 = 100+10+1=111 */
+            color:#00F; /* 蓝色 */
+        }
+        #redP p span em {
+            /* 权值 = 100+1+1+1=103 */
+            color:#FF0;/*黄色*/
+        }
+    </style>
+    </head>
+    <body>
+        <div id="redP">
+            <p class="red">red
+                <span><em>em red</em></span>
+            </p>
+            <p>red</p>
+        </div>
+    </body>
+    
+~~CSS 优先级法则：
+    A  选择器都有一个权值，权值越大越优先；
+    B  当权值相等时，后出现的样式表设置要优于先出现的样式表设置；
+    C  创作者的规则高于浏览者：即网页编写者设置的CSS 样式的优先权高于浏览器所设置的样式；
+    D  继承的CSS 样式不如后来指定的CSS 样式；
+    E  在同一组属性设置中标有“!important”规则的优先级最大；示例如下：
 
 http://zhidao.baidu.com/link?url=SQ180yU59LDhFd8XUOKVH-_fKha_DPfKiTdNb5KlVMtmJ8A0CqUjR18sAOzwKFLHfMAoyyVAtiGlTBO4uw3vv_
 
