@@ -32,4 +32,4 @@
   二、全局改变样式 
       可以通过改变外链样式的的href的值实现网页样式的实时切换
       <link rel = "stylesheet" type="text/css" id="css" href="firefox.css" /> 
-      <span on click="javascript:document.getElementById('css').href = 'ie.css'">点我改变样式</span>
+      <span onclick="javascript:document.getElementById('css').href = 'ie.css'">点我改变样式</span>
