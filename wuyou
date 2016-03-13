@@ -5,11 +5,17 @@
   边框(border)就是盒子本身了；
   至于边界(margin)则说明盒子摆放的时候的不能全部堆在一起，要留一定空隙保持通风，同时也为了方便取出。
   
-2.如何用js给dom添加样式：
-  ~~~给样式表（包括内部样式和外部样式）添加样式js：*  document.styleSheets[0].addRule("#id1","color:blue");
-                            *   var cssStr="#id1 {color:green;}";
-                                document.styleSheets.item(document.styleSheets.length-1).cssText=cssStr;//ie好用 其他不好用
-  ~~~使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class2");
+2.如何用js给dom添加样式：http://www.cnblogs.com/xugang/archive/2010/09/24/1833760.html
+  一、局部改变样式 
+    ~~~给样式表（包括内部样式和外部样式）添加样式：
+        *  document.styleSheets[0].addRule("#id1","color:blue");
+        *   var cssStr="#id1 {color:green;}";
+            document.styleSheets.item(document.styleSheets.length-1).cssText=cssStr;//ie好用 其他不好用
+        *调用方法： 改变className     document.getElementById('id1').className="test"; 
+        *改变直接样式:   document.getElementById('id1').style.backgroundColor="red";
+
+    ~~~使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class2");
+  
   
   
   
