@@ -71,16 +71,18 @@
           理解prototype不应把它和继承混淆。A的prototype为B的一个实例，可以理解A将B中的方法和属性全部克隆了一遍。
           A能使用B的方法和属性。这里强调的是克隆而不是继承。
           可以出现这种情况：A的prototype是B的实例，同时B的prototype也是A的实例。
+          
+          我们首先定义了baseClass类，然后我们要定义extentClass类，但是我们打算以baseClass的一个实例为原型，
+          来克隆的extendClass也同时包含showMsg这个对象方法。
           <script>
               function baseClass(){
-                  this.showMsg = function()
-                  {
+                  this.showMsg = function(){
                       alert("baseClass::showMsg");
                   }
               }
               function extendClass() {
               }
-              extendClass.prototype = new baseClass();
+              extendClass.prototype = new baseClass();//类extendClass的原型是类baseClass的实例；
               
               var instance = new extendClass();
               instance.showMsg(); // 显示baseClass::showMsg
