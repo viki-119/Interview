@@ -16,12 +16,12 @@
                     获取class的名字：                   document.getElementById("id1").className;
                     判断元素有无class属性：             document.getElementById("id1").hasAttribute("class");
                     jQuery判断有无某一个具体的样式：    $("#d1").hasClass("class2");
-         使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class3");同上
+         使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class3");
+         jQuery如果通过属性来设置样式，也会覆盖掉之前的样式：$("#d1").attr("class","areaon");
                     获取class的名字：                        domObj.getAttribute("class");
                     jQuery追加样式（js无追加样式的方法）：   $("#d1").addClass("areaon");
                     jQuery移除某一个样式（保留其他样式）：   $("#d1").removeClass("areaon");
-                    jQuery移除class属性，然后在添加样式 ：   $("#d1").removeAttr("css").attr("class","areaon");
-                                                             $("#d1").removeAttr("class").attr("class","areaon");//效果同上
+                    jQuery移除class属性，然后在添加样式 ：   $("#d1").removeAttr("class").attr("class","areaon");
          
     ~~~改变内联样式直接样式   
         *改变内联样式直接样式:document.getElementById('id1').style.backgroundColor="red";
