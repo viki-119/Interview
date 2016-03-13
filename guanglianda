@@ -121,6 +121,8 @@ AngularJS在$scope变量中使用脏值检查来实现了数据双向绑定。
 
 9.闭包的优缺点：http://www.phpddt.com/dhtml/javascript-closure.html
 
+http://blog.sina.com.cn/s/blog_50197c290101f870.html
+
 闭包：
 http://www.jb51.net/article/24101.htm
 
