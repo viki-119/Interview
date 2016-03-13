@@ -84,21 +84,38 @@
             var baseinstance = new baseClass();
             baseinstance.showMsg.call(instance);//显示baseClass::showMsg
             
-            <script>
-                function baseClass(){
-                    this.showMsg = function(){
+            <script type="text/javascript">
+                function baseClass() {
+                    this.showMsg = function() {
                         alert("baseClass::showMsg");
                     }
-                }
-                function extendClass() {
-                    this.showMsg = function(){
-                        alert("extends::showMsg");
+                    this.baseShowMsg = function() {
+                        alert("baseClass::baseShowMsg");
                     }
                 }
+            //    类方法
+                baseClass.showMsg = function() {
+                    alert("baseClass::showMsg static");
+                }
+            
+                function extendClass() {
+                    this.showMsg =function () {
+                        alert("extendClass::showMsg");
+                    }
+                }
+                extendClass.showMsg = function() {
+                    alert("extendClass::showMsg static")
+                }
+            
                 extendClass.prototype = new baseClass();
                 var instance = new extendClass();
             
-                var baseinstance=new baseClass();
-                baseinstance.showMsg().call(instance)
+                instance.showMsg(); //显示extendClass::showMsg
+                instance.baseShowMsg(); //显示baseClass::baseShowMsg
+            
+                baseClass.showMsg.call(instance);//显示baseClass::showMsg static   //extends强制调用baseClass的类方法
+            
+                var baseinstance = new baseClass();
+                baseinstance.showMsg.call(instance);//显示baseClass::showMsg  //extends强制调用baseClass的对象方法
             </script>
     
