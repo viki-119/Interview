@@ -18,6 +18,7 @@
          使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class3");同上
                     获取class的名字：                        domObj.getAttribute("class");
                     jQuery追加样式（js无追加样式的方法）：   $("#d1").addClass("areaon");
+                    jQuery移除某一个样式（保留其他样式）：   $("#d1").removeClass("areaon");
          
     ~~~改变内联样式直接样式   
         *改变内联样式直接样式:document.getElementById('id1').style.backgroundColor="red";
