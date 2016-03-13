@@ -84,17 +84,21 @@
             var baseinstance = new baseClass();
             baseinstance.showMsg.call(instance);//显示baseClass::showMsg
             
-          <script>
-              function baseClass(){
-                  this.showMsg = function(){
-                      alert("baseClass::showMsg");
-                  }
-              }
-              function extendClass() {
-              }
-              extendClass.prototype = new baseClass();//类extendClass的原型是类baseClass的实例；
-              
-              var instance = new extendClass();
-              instance.showMsg(); // 显示baseClass::showMsg
-          </script>
+            <script>
+                function baseClass(){
+                    this.showMsg = function(){
+                        alert("baseClass::showMsg");
+                    }
+                }
+                function extendClass() {
+                    this.showMsg = function(){
+                        alert("extends::showMsg");
+                    }
+                }
+                extendClass.prototype = new baseClass();
+                var instance = new extendClass();
+            
+                var baseinstance=new baseClass();
+                baseinstance.showMsg().call(instance)
+            </script>
     
