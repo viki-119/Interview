@@ -11,11 +11,12 @@
         *  document.styleSheets[0].addRule("#id1","color:blue");
         *   var cssStr="#id1 {color:green;}";
             document.styleSheets.item(document.styleSheets.length-1).cssText=cssStr;//ie好用 其他不好用
-    ~~~改变class的名字  
-        *调用方法： 改变className     document.getElementById('id1').className="class2"; 
-               获取class的value：     document.getElementById("id1").className;
+    ~~~改变class的名字  ：http://www.jb51.net/article/28118.htm
+        *调用方法设置className，会覆盖原有的class：     document.getElementById('id1').className="class2"; 
+                    获取class的名字：                   document.getElementById("id1").className;
+                    判断元素有无class属性：             document.getElementById("id1").hasAttribute("class");
          使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class3");同上
-               获取class的value：     domObj.getAttribute("class");
+                    获取class的名字：                        domObj.getAttribute("class");
          
     ~~~改变内联样式直接样式   
         *改变内联样式直接样式:document.getElementById('id1').style.backgroundColor="red";
