@@ -59,6 +59,23 @@ http://www.cnblogs.com/xugang/archive/2010/09/24/1833760.html
     C  创作者的规则高于浏览者：即网页编写者设置的CSS 样式的优先权高于浏览器所设置的样式；
     D  继承的CSS 样式不如后来指定的CSS 样式；
     E  在同一组属性设置中标有“!important”规则的优先级最大；示例如下：
+    <html>
+      <head>
+        <style type="text/css">
+         #redP p{
+            /*两个color属性在同一组*/
+            color:#00f !important; /* 优先级最大 */
+            color:#f00;
+         }
+        </style>
+      </head>
+      <body>
+         <div id="redP">
+           <p>color</p>
+           <p>color</p>
+         </div>
+      </body>
+    </html>
 
 http://zhidao.baidu.com/link?url=SQ180yU59LDhFd8XUOKVH-_fKha_DPfKiTdNb5KlVMtmJ8A0CqUjR18sAOzwKFLHfMAoyyVAtiGlTBO4uw3vv_
 
