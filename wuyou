@@ -17,6 +17,7 @@
                     判断元素有无class属性：             document.getElementById("id1").hasAttribute("class");
          使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class3");同上
                     获取class的名字：                        domObj.getAttribute("class");
+                    jQuery追加样式（js无追加样式的方法）：   $("#d1").addClass("areaon");
          
     ~~~改变内联样式直接样式   
         *改变内联样式直接样式:document.getElementById('id1').style.backgroundColor="red";
@@ -27,7 +28,3 @@
       可以通过改变外链样式的的href的值实现网页样式的实时切换
       <link rel = "stylesheet" type="text/css" id="css" href="firefox.css" /> 
       <span on click="javascript:document.getElementById('css').href = 'ie.css'">点我改变样式</span>
-  
-  
-  
-  
