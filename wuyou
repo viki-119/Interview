@@ -13,10 +13,14 @@
             document.styleSheets.item(document.styleSheets.length-1).cssText=cssStr;//ie好用 其他不好用
     ~~~改变class的名字  
         *调用方法： 改变className     document.getElementById('id1').className="class2"; 
+               获取class的value：     document.getElementById("id1").className;
          使用这种方法可以设置样式，同时也会覆盖之前写的样式；domObj.setAttribute("class","class3");同上
+               获取class的value：     domObj.getAttribute("class");
          
     ~~~改变内联样式直接样式   
         *改变内联样式直接样式:document.getElementById('id1').style.backgroundColor="red";
+                              document.getElementById("id1").style.color;（获取不到颜色的值）
+                             $('#id1').css({color:'red'});
 
   二、全局改变样式 
       可以通过改变外链样式的的href的值实现网页样式的实时切换
