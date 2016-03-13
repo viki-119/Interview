@@ -72,8 +72,18 @@
           A能使用B的方法和属性。这里强调的是克隆而不是继承。
           可以出现这种情况：A的prototype是B的实例，同时B的prototype也是A的实例。
           
-          我们首先定义了baseClass类，然后我们要定义extentClass类，但是我们打算以baseClass的一个实例为原型，
-          来克隆的extendClass也同时包含showMsg这个对象方法。
+          * 我们首先定义了baseClass类，然后我们要定义extentClass类，但是我们打算以baseClass的一个实例为原型来克隆，
+            extendClass同时包含showMsg这个对象方法。
+            extendClass.prototype = new baseClass()就可以阅读为：extendClass是以baseClass的一个实例为原型克隆创建的。
+          * 如果extendClass中本身包含有一个与baseClass同名的对象方法该如何执行？
+            函数运行时会先去本体的函数中去找，如果找到则运行，找不到则去prototype中寻找函数。或者可以理解为prototype不会克隆同名函数。
+          * 如果我想使用extendClass的一个实例instance调用baseClass的对象方法showMsg怎么办？
+            答案是可以使用call
+            extendClass.prototype = new baseClass();
+            var instance = new extendClass();
+            var baseinstance = new baseClass();
+            baseinstance.showMsg.call(instance);//显示baseClass::showMsg
+            
           <script>
               function baseClass(){
                   this.showMsg = function(){
