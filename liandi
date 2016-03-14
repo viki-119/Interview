@@ -25,8 +25,27 @@
     foo();
     console.log(c)
     
+    /********************************************************************/
+    执行如下的函数，则弹出：undefined和world
+    myName="hello";
+    function func(){
+        alert(myName);
+        var myName="world";
+        alert(myName);
+    }
+    func();
+    执行如下的函数，则弹出：hello和world
+    myName="hello";
+    function func(){
+        alert(myName);
+        myName="world";
+        alert(myName);
+    }
+    func();
+    
+    
 6.严格模式：strict
-    标记 严格模式后
+~~~标记 严格模式后
     其一：如果在语法检测时发现语法问题，则整个代码块失效，并导致一个语法异常。
     其二：如果在运行期出现了违反严格模式的代码，则抛出执行异常。
     注：经过测试IE6,7,8,9均不支持严格模式。
@@ -37,7 +56,7 @@
     
     http://zhidao.baidu.com/link?url=EkMCCJo5AjDIRkyR_yyGF29kv-7e8xJsrr2M
     0KclRGr8fy8xd25TZ13vEYrUpjPd6Eugd-L2Mdt7wHpFrfImUXqpaHzkxOgPWibRG13Q_z3
-    严格模式是一种将更好的错误检查引入代码中的方法。 在使用严格模式时，无法使用隐式声明的变量、
+~~~严格模式是一种将更好的错误检查引入代码中的方法。 在使用严格模式时，无法使用隐式声明的变量、
     将值赋给只读属性或将属性添加到不可扩展的对象等
     1、严格模式的目的：
         1）消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为
@@ -67,6 +86,8 @@
         }
         testFunction();
         testvar = 5;
+        
+7.
     
   
 
