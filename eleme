@@ -28,3 +28,17 @@
     } 
     myTest(); 
   
+5.通过浮动来定位：
+  <style>
+        #idE{margin:0 auto;height:500px;border:1px solid red;}
+        #idA{height:400px;width:200px;border:1px solid red;float:left;margin:2px;}
+        #idB{height:400px;width:800px;border:1px solid red;float:left;margin:2px;}
+        #idC{height:400px;width:200px;border:1px solid red;float:left;margin:2px;}
+        #idD{width:1200px;height:80px;border:1px solid red;clear: both;margin:1px;}
+    </style>
+    <div id="idE">E
+        <div id="idA">A</div>
+        <div id="idB">B</div>
+        <div id="idC">C</div>
+        <div id="idD">D</div>
+    </div>
