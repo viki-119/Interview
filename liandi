@@ -97,5 +97,21 @@
     }
     C：f.bind(o)(123)
     
-  
+ 8.c的值是什么？（6）
+    var a=function(){
+        this.b=1;
+    };
+    var b=function(){
+        var b=new a().b;
+        return 5+b;
+    }
+    var c=b();
+    console.log(c);
 
+9.b的值是什么？（）
+    var a={1:'one',2:'two',3:'three'};
+    var b=Object.keys(a);
+    console.log(b);
+   结果： b=["1", "2", "3"]
+   
+ 10.
