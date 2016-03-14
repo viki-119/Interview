@@ -18,6 +18,12 @@
   C:
   D:
   
-3.
+3.全局变量和局部变量：http://www.jb51.net/article/61442.htm
+    在以下代码中哪些变量是全局变量？（）答案是：a和c
+    var a=1;
+    function foo(){var b=c=2;//等价于var b=2；c=2;}
+    foo();
+    
+    
   
 
