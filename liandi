@@ -21,9 +21,52 @@
 3.全局变量和局部变量：http://www.jb51.net/article/61442.htm
     在以下代码中哪些变量是全局变量？（）答案是：a和c
     var a=1;
-    function foo(){var b=c=2;//等价于var b=2；c=2;}
+    function foo(){var b=c=2;}//等价于var b=2；c=2;
     foo();
+    console.log(c)
     
+6.严格模式：strict
+    标记 严格模式后
+    其一：如果在语法检测时发现语法问题，则整个代码块失效，并导致一个语法异常。
+    其二：如果在运行期出现了违反严格模式的代码，则抛出执行异常。
+    注：经过测试IE6,7,8,9均不支持严格模式。
+    
+    缺点：
+    现在网站的JS 都会进行压缩，一些文件用了严格模式，而另一些没有。
+    这时这些本来是严格模式的文件，被 merge 后，这个串就到了文件的中间，不仅没有指示严格模式，反而在压缩后浪费了字节。
+    
+    http://zhidao.baidu.com/link?url=EkMCCJo5AjDIRkyR_yyGF29kv-7e8xJsrr2M
+    0KclRGr8fy8xd25TZ13vEYrUpjPd6Eugd-L2Mdt7wHpFrfImUXqpaHzkxOgPWibRG13Q_z3
+    严格模式是一种将更好的错误检查引入代码中的方法。 在使用严格模式时，无法使用隐式声明的变量、
+    将值赋给只读属性或将属性添加到不可扩展的对象等
+    1、严格模式的目的：
+        1）消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为
+    　　2）消除代码运行的一些不安全之处，保证代码运行的安全
+    　　3）提高编译器效率，增加运行速度
+    　　4）为未来新版本的Javascript做好铺垫
+   2、声明严格模式
+        可以通过在文件、程序或函数的开头添加 "use strict"; 来声明严格模式。 
+        此类声明称作“指令序言”。 严格模式声明的范围取决于其上下文。
+        如果在全局上下文（函数的范围之外）中声明严格模式，则程序中的所有代码都处于严格模式。
+        如果在函数中声明严格模式，则函数中的所有代码都处于严格模式。
+         例如，在以下示例中，所有代码都处于严格模式，并且函数外部的变量声明会导致出现语法错误“严格模式下未定义变量”
+        "use strict";
+        function testFunction(){
+            var testvar = 4;
+            return testvar;
+        }
+        // This causes a syntax error.
+        testvar = 5;
+
+        在以下示例中，仅 testFunction 中的代码处于严格模式。 函数外部的变量声明不会导致语法错误，但函数内部的声明会导致语法错误
+        function testFunction(){
+            "use strict";
+            // This causes a syntax error.
+            testvar = 4;
+            return testvar;
+        }
+        testFunction();
+        testvar = 5;
     
   
 
