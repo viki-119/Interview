@@ -121,4 +121,15 @@
 11.0=='';语句的结果是什么？
     true
     
-12
+12.['1','2','3'].map(parseInt)的结果是什么？（）
+    C：[1, NaN, NaN]
+    
+13.下面这段代码输出的结果：（D）succ
+    var str='Landi';
+    console.log('this value is'+(str==='Landi')?'succ':'error');
+    
+14.下面这段代码输出的结果：（C） false false
+    var a=/123/,b=/123/;
+    console.log(a==b);
+    console.log(a===b);
+
