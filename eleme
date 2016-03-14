@@ -14,17 +14,17 @@
     一种是函数表达式，另外一种是函数声明方式。我们需要重点注意的是，只有函数声明形式才能被提升。 
     function myTest(){ 
     foo(); 
-    function foo(){ //函数声明
-    alert("我来自 foo"); 
-    } 
+      function foo(){ //函数声明
+      alert("我来自 foo"); 
+      } 
     } 
     myTest(); 
     
     function myTest(){ 
     foo(); 
-    var foo =function foo(){ //函数表达式
-    alert("我来自 foo"); 
-    } 
+      var foo =function foo(){ //函数表达式
+      alert("我来自 foo"); 
+      } 
     } 
     myTest(); 
   
