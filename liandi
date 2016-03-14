@@ -133,3 +133,9 @@
     console.log(a==b);
     console.log(a===b);
 
+15.下面这段代码输出的结果：（C） true false
+    var two=0.2;
+    var one=0.1;
+    var eight=0.8;
+    var six=0.6;
+    console.log([two-one==one,eight-six==two]);
