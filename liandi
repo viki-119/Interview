@@ -1,0 +1,23 @@
+1.请问一下代码中，<h1>与p之间的margin为多少px? 答案：25px；    A：20px   B: 25px  C: 45px  D: 15px
+    <h1>h2</h1>
+    <p>p</p>
+    <style>
+        h1{
+            margin:0 0 25px 0;
+            background:#cfc;
+        }
+        p{
+            margin:20px 0 0 0;
+            background: #cf9;
+        }
+    </style>
+    
+2.用css来将多个图片设置为背景？（B）
+  A:
+  B:background-image:url("mmexport1442063699244.gif"),url("mmexport1442063707231.gif");
+  C:
+  D:
+  
+3.
+  
+
