@@ -36,4 +36,32 @@
     student.printName();  //执行student对象的printName函数
     
 3.JavaScript如何实现继承？：http://blog.csdn.net/fuxiaohui/article/details/44910765
+    1、继承第一种方式：对象冒充
+        function Parent(username){
+            this.username = username;
+            this.hello = function(){
+                alert(this.username);
+            }
+        }
+        function Child(username,password){
+            //通过以下3行实现将Parent的属性和方法追加到Child中，从而实现继承
+            //第一步：this.method是作为一个临时的属性，并且指向Parent所指向的对象，
+            //第二步：执行this.method方法，即执行Parent所指向的对象函数
+            //第三步：销毁this.method属性，即此时Child就已经拥有了Parent的所有属性和方法
+            this.method = Parent;
+            this.method(username);//最关键的一行
+            delete this.method;
+
+            this.password = password;
+            this.world = function(){
+                alert(this.password);
+            }
+        }
+        var parent = new Parent("zhangsan");
+        var child = new Child("lisi","123456");
+        parent.hello();
+        child.hello();
+        child.world();
     
+    2、继承第二种方式：call()方法方式
+
