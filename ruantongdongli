@@ -34,3 +34,6 @@
     测试时可以这样写：
     var student = new Student("张三"); //创建一个“Student对象”，实际上是一个Function实例对象
     student.printName();  //执行student对象的printName函数
+    
+3.JavaScript如何实现继承？：http://blog.csdn.net/fuxiaohui/article/details/44910765
+    
