@@ -1,18 +1,36 @@
 1.监听事件两种方法之间的区别：
-第一种方法会引发重写的问题，会执行重写后的方法，只执行一次。
-第二种方法addEventListener（），添加多少个监听，就会执行多少次。
-<script>
-    window.onload=function(){
-        alert("a")
-    }
-    window.onload=function(){
-        alert("b")
-    }
+    第一种方法会引发重写的问题，会执行重写后的方法，只执行一次。
+    第二种方法addEventListener（），添加多少个监听，就会执行多少次。
+    <script>
+        window.onload=function(){
+            alert("a")
+        }
+        window.onload=function(){
+            alert("b")
+        }
+        
+        window.addEventListener("load", function () {
+            alert("c")
+        })
+        window.addEventListener("load", function () {
+            alert("d")
+        })
+    </script>
     
-    window.addEventListener("load", function () {
-        alert("c")
-    })
-    window.addEventListener("load", function () {
-        alert("d")
-    })
-</script>
+2.JavaScript如何创建一个类？
+    http://zhidao.baidu.com/link?url=6tF7Qn4XktNu_P_ltLgujdx9InFyMC-
+    X0jrUiLpF6W5q8WYbL9HFzxfkmc8sRWKboAykcgXWZWKtmTH4aSusz_
+    
+    javascript是一个“基于对象”的编程语言，不是面向对象的编程语言。
+    所以你如果想要用javascript来模拟面向对象编程（例如Java的类），
+    那么就可以用function来模拟Class，用function的原型prototype或者嵌套function来模拟类的方法或者属性。下面给你一个简单的例子：
+    //模拟学生类，可以带参数，例如initName
+    function Student(initName){
+        var name = initName; //模拟学生类的属性name
+    }
+    Student.prototype.printName = function(){ //定义Student类prototype中的printName函数
+        alert(this.name);
+    }
+    测试时可以这样写：
+    var student = new Student("张三"); //创建一个“Student对象”，实际上是一个Function实例对象
+    student.printName();  //执行student对象的printName函数
