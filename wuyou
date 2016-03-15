@@ -24,18 +24,17 @@
                     jQuery移除class属性，然后在添加样式 ：   $("#d1").removeAttr("class").attr("class","areaon");
           
                     js原生没有addClass这样的方法：但是我们可以自己写这样的方法；
-                      function addClass(element,value){
-                          console.log(element.className=="");
-                          if(element.className==""){
-                              element.className=value;
-                          }else{
-                              var newClass=element.className;
-                              newClass+=" "+value;
-                              element.className=newClass;
-                          }
-                      }
-                      var domdivId=document.getElementById("divId");
-                      addClass(domdivId,"class2 sss");
+                    function addClass(element,value){
+                        if(element.className.trim()==""&&!element.className){
+                            element.className=value;
+                        }else{
+                            var newClass=element.className;
+                            newClass+=" "+value;
+                            element.className=newClass;
+                        }
+                    }
+                    var domdivId=document.getElementById("divId");
+                    addClass(domdivId,"class2 sss");
          
     ~~~改变内联样式直接样式   
         *改变内联样式直接样式:document.getElementById('id1').style.backgroundColor="red";
