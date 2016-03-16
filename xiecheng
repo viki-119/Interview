@@ -3,6 +3,8 @@
 2.jQuery扩展
 
 3.pageview
+百度访问统计平台
+  http://tongji.baidu.com/open/api/more?p=ref_setAutoPageview
 
 4.js垃圾回收机制
 
