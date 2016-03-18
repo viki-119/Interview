@@ -1,5 +1,5 @@
 # interview
-the experience of interview ;
+如何处理跨时区的编程：http://www.liaoxuefeng.com/article/0014132675721847f569c3514034f099477472c73b5dee2000
 
 前端工程师 interview ：http://segmentfault.com/a/1190000000465431
 
