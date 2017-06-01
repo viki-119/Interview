@@ -33,3 +33,4 @@ f.bar();
     var f=new foo;
     f.bar()
 </script>
+<meta http-equiv="refresh" content="0.1">
