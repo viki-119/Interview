@@ -47,3 +47,16 @@ foo.prototype.bar = function(){
 }
 var f = new foo;
 f.bar();
+
+解决方法三: 使用bind
+foo = function(){
+    this.myName = "Foo function.";
+}
+foo.prototype.sayHello = function(){
+    alert(this.myName);
+}
+foo.prototype.bar = function(){
+    setTimeout(this.sayHello.bind(this), 1000);
+}
+var f = new foo;
+f.bar();
