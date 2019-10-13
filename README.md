@@ -23,3 +23,10 @@ http://zhidao.baidu.com/link?url=AIxH001CVYs6JZYAfVVma4rLMLQO6bRtA9Xv4dYbhBAYrRD
 
 h5前端工程师面试：
 http://www.cnblogs.com/chenrf/p/5216710.html
+
+js基本数据类型:
+number, string, boolean, undefined, symbol|(es6新加类型, 表示独一无二的值)
+复杂数据类型: object  | (null也属于object类型)
+函数类型: function
+
+symbol类型的表述文档: https://www.jianshu.com/p/0ff7c864cb4e
