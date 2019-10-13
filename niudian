@@ -13,7 +13,7 @@ foo.prototype.bar = function(){
 var f = new foo;
 f.bar();
 
-解决方法：
+解决方法：绑定词法作用域中this
 <script>
     foo=function(){
         this.myName="ssss";
@@ -34,3 +34,16 @@ f.bar();
     f.bar()
 </script>
 <meta http-equiv="refresh" content="0.1">
+
+解决方法二: 使用箭头函数
+foo = function(){
+    this.myName = "Foo function.";
+}
+foo.prototype.sayHello = function(){
+    alert(this.myName);
+}
+foo.prototype.bar = function(){
+    setTimeout(() => this.sayHello(), 1000);
+}
+var f = new foo;
+f.bar();
