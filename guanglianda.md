@@ -90,8 +90,9 @@
 
 5.js中的继承：
 
-6.call() 与apply()
-    https://www.runoob.com/w3cnote/js-call-apply-bind.html
+### call() 与apply() | bind()
+
+    [参考链接1](https://www.runoob.com/w3cnote/js-call-apply-bind.html)
     
     http://uule.iteye.com/blog/1158829
     
