@@ -12,8 +12,22 @@
 * [参考链接3](https://www.jianshu.com/p/ed254fd97125)
 * [参考链接4](https://baijiahao.baidu.com/s?id=1618114723935605183&wfr=spider&for=pc)
 
-### 深入理解Cookie和Session机制;
-* [参考链接1](https://www.jianshu.com/p/b5efddc433f5)
+深入理解Cookie和Session机制;
+-------------------------
+* cookie客户端保持状态；session服务端保持状态;
+
+[参考链接](https://www.cnblogs.com/pengc/p/8714475.html)
+[参考链接2](https://www.jianshu.com/p/b5efddc433f5)
+
+为什么禁用cookie就不能得到session？解决方案是什么？
+----------------------------------------------
+session采用session_id来确定当前对话所对应的服务器session，而session_id是存储在cookie中通过cookie来传递的，禁用cookie相当于失去了session_id,也就得不到session了；
+
+解决方案：
+* 1.把session_id直接附加在url路径的后面；url重写
+* 2.表单隐藏字段，以便在表单提交时把session_id传回服务器；
+* [参考链接1](https://blog.csdn.net/cckevincyh/article/details/52494014)
+* [参考链接2](https://blog.csdn.net/ai_shuyingzhixia/article/details/80778183)
 
 ### localStorage 和 sessionStorage 理解
 #### 相同点:
@@ -40,13 +54,15 @@
 ### cookie 与 localStorage/sessionStorage 区别
 * cookie的大小只有4Kb左右（浏览器不同，大小也不同); 而web Storage的大小有5MB
 
-[参考链接3](https://www.cnblogs.com/8023-CHD/p/10944760.html)
-[参考链接4](https://blog.csdn.net/hjc256/article/details/88789196)
+[参考链接1](https://www.cnblogs.com/8023-CHD/p/10944760.html)
+[参考链接2](https://blog.csdn.net/hjc256/article/details/88789196)
+[参考链接3](https://www.jianshu.com/p/701ea9950f6d)
 
 ## css相关:
-### display: none; 与 visibility: hidden;[参考链接](https://www.w3school.com.cn/cssref/pr_class_visibility.asp)
+### display: none; 与 visibility: hidden;
 * visibility: hidden;即使不可见的元素也会占据页面上的空间。
 * display: none; 不占据页面空间。
+* [参考链接](https://www.w3school.com.cn/cssref/pr_class_visibility.asp)
 
 | 值 | 描述 |
 | --- | ------ |
@@ -55,3 +71,8 @@
 | collapse | 当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 "hidden"。 |
 | inherit | 规定应该从父元素继承 visibility 属性的值。 |
 
+
+多标签模式和多窗口模式
+--------------------
+* 多标签模式就是在一个窗口启用多个标签；
+* 多窗口模式就是一个窗口只能有一个标签；许打开多个页面实现多标签；
