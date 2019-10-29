@@ -5,6 +5,16 @@
 * [参考链接1](https://www.cnblogs.com/zhou-test/p/9803478.html)
 * [参考链接1](https://www.cnblogs.com/sunny-sl/p/6529830.html)
 
+> http状态码
+
+状态码 | 描述
+--------|-------
+1xx | 临时响应
+2xx | 成功
+3xx | 已重定向
+4xx | 请求错误
+5xx | 服务器错误
+204 | 浏览器请求执行成功，但没有数据，浏览器不用刷新页面。也不用倒向新的页面；
 
 ### TCP的三次握手与四次挥;
 * [参考链接1](https://www.cnblogs.com/crazytata/p/9086732.html)
@@ -15,6 +25,29 @@
 深入理解Cookie和Session机制;
 -------------------------
 * cookie客户端保持状态；session服务端保持状态;
+
+regexObj.exec(str)
+
+```js
+function getCookie(name) {
+  const arr = new RegExp('\\b' + name + '\\=([^;]+)').exec(document.cookie);
+  return arr ? arr[1] : '';
+}
+
+const cc ="name=123; name=456";
+const arr = new RegExp('\\b' + 'name' + '\\=([^;]+)').exec(cc);
+console.log(arr);
+// ["name=123", "123", index: 0, input: "name=123; name=456", groups: undefined]
+```
+- **[参考链接](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)**
+
+regexObj.test(str)
+* **方法执行一个检索，用来查看正则表达式与指定的字符串是否匹配。返回 true 或 false。**
+* [参考链接](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
+
+str.search(regexp)
+* **如果匹配成功，则 search() 返回正则表达式在字符串中首次匹配项的索引;否则，返回 -1。**
+* [参考链接](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/search)
 
 [参考链接](https://www.cnblogs.com/pengc/p/8714475.html)
 [参考链接2](https://www.jianshu.com/p/b5efddc433f5)
