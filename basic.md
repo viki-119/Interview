@@ -36,15 +36,43 @@ JavaScript中textContent、innerText和innerHTML的用法以及区别
 
 > innerText和innerHTML的区别
 * 如果使用innerText主要是设置文本内容,设置标签内容是没有标签的效果的
-* innerHTML是可以设置
+* innerHTML是可以设置文本内容
 * innerHTML主要的作用是在标签中设置新的html标签内容,是有标签效果的
 * 想要设置标签内容,使用innerHTML,想要设置文本内容,innerText或者textContent,或者innerHTML,推荐用innerHTML
 * innerText可以获取标签中间的文本内容,但是标签中如果还有标签,那么最里面的标签的文本内容也能获取.---获取不到标签的,文本可以获取
 * innerHTML才是真正的获取标签中间的所有内容
 
+[参考链接](https://blog.csdn.net/tswc_byy/article/details/82711093)
+
 js相关
 =====
-索引不是值(容易出错)
+js对象的深拷贝
+------------
+
+[参考链接](https://blog.csdn.net/lyt_angularjs/article/details/86599820)
+[参考链接](https://www.cnblogs.com/renbo/p/9563050.html)
+
+数组相关
+-------
+```js
+Array.prototype.afterArray=function(){
+  console.log('this=',this);
+  this.splice(0,1);
+};
+arr=[1,1,1,5,1,1,1,6];
+for (var i=0;i<arr.length;i++) {
+  console.log('前arr=',arr);
+  console.log('i=',i);
+  console.log('arr.length=',arr.length);
+  console.log('arr[i]=',arr[i]);
+  if (arr[i] === 1) {
+      arr.afterArray();
+  }
+  console.log('后arr=',arr);
+}
+```
+
+对象地址不是值(容易出错)
 ------------------
 ```js
 const obj = {
@@ -96,7 +124,7 @@ window.screen:表示分辨率信息；
 
 ```js
 window.location:地址栏，可以控制页面跳转;
-	location对象的属性;
+  location对象的属性;
     host: 主机
     port: 端口
     href: 地址
@@ -105,8 +133,7 @@ window.location:地址栏，可以控制页面跳转;
     search：查询字符串
     assign(url):页面跳转
   用法:
-    1.获取当前地址  location.href;
-    2.location.href="http://www.baidu.com"
+    1.获取当前地址  location.href;2.location.href="http://www.baidu.com"
 ```
 
 ```js
@@ -134,7 +161,7 @@ window.history:历史记录,控制前进后退；
   console.log('1'+ 2); // 12  
   console.log(1+ '2'); // 12 
   ```
-  **除了数字与数字相加是数字以外，其余情况相加都是字符串**
+> 除了数字与数字相加是数字以外，其余情况相加都是字符串
 
 parseInt()和Number()比较
 -----------------------
