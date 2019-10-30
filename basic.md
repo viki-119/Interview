@@ -44,8 +44,20 @@ JavaScript中textContent、innerText和innerHTML的用法以及区别
 
 [参考链接](https://blog.csdn.net/tswc_byy/article/details/82711093)
 
-js相关
+css篇
 =====
+box-sizing的使用场景:
+--------------------
+值       | 描述    
+---------|-----------
+content-box: | 宽度和高度分别应用到元素的内容框。在宽度和高度之外绘制元素的内边距和边框。
+border-box: | 为元素设定的宽度和高度决定了元素的边框盒。就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度
+inherit: | 规定应从父元素继承 box-sizing 属性的值。
+[参考链接](https://www.w3school.com.cn/cssref/pr_box-sizing.asp)
+[参考链接](https://www.cnblogs.com/maxueting/p/11162344.html)
+
+js篇
+====
 js对象的深拷贝
 ------------
 
@@ -337,6 +349,22 @@ React创建组件的三种方式及其区别
 
 [参考链接](https://www.jianshu.com/p/214f4d5d178f)
 
+componentWillUnmount使用场景:
+---------------------------
+> 在组件被卸载的和销毁之前立即调用； 包括切换路由；在此方法内实现必要的清理，例如使计时器无效，取消网络请求，删除监听事件。
+
+react 16版本新特性
+-----------------
+> 抛弃了一些生命周期
+ * componentWillMount
+ * componentWillReceiveProps
+ * componentWillUpdate
+
+> getDerivedStateFromProps
+
+> getSnapshotBeforeUpdate
+
+[参考链接](https://www.jianshu.com/p/50fe3fb9f7c3)
 Error
 ==========
 > Unnecessary semicolon  [ˈsɛmɪˌkolən] 不必要的分号;
