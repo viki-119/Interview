@@ -46,6 +46,13 @@ JavaScript中textContent、innerText和innerHTML的用法以及区别
 
 css篇
 =====
+vertical-align
+--------------
+> vertical-align 属性设置元素的垂直对齐方式。
+[参考链接](https://www.w3school.com.cn/css/pr_pos_vertical-align.asp)
+
+
+
 box-sizing的使用场景:
 --------------------
 值       | 描述    
@@ -58,6 +65,14 @@ inherit: | 规定应从父元素继承 box-sizing 属性的值。
 
 js篇
 ====
+onmousemove, onmouseleave 和 onmouseout 的区别。
+----------------------------------------------
+> onmouseleave: 事件在鼠标移出元素时触发。
+> onmouseleave: 类似于onmouseout事件。 唯一的区别是 onmouseleave事件不支持冒泡
+[参考链接](https://www.runoob.com/try/try.php?filename=tryjsref_onmousemove_leave_out)
+[参考链接](https://www.runoob.com/jsref/event-onmouseleave.html)
+
+
 js对象的深拷贝
 ------------
 
@@ -309,6 +324,12 @@ console.log(myObj) // {age: 12}
 
 React篇
 ========
+react-transition-group 一个官网提供的动画过度库。
+---------------------------------------------
+
+[参考链接](https://github.com/kk412027247/react-turntable)
+[参考链接](https://segmentfault.com/a/1190000015487495)
+
 
 何时使用Component还是PureComponent？
 ---------------------------------
@@ -324,7 +345,6 @@ React篇
 
 [参考链接(简书)](https://www.jianshu.com/p/b7733dc8f826)
 [参考链接](https://segmentfault.com/a/1190000014979065)
-
 
 React创建组件的三种方式及其区别
 ----------------------------
