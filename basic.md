@@ -44,6 +44,11 @@ JavaScript中textContent、innerText和innerHTML的用法以及区别
 
 [参考链接](https://blog.csdn.net/tswc_byy/article/details/82711093)
 
+js无法操作文件系统
+----------------
+
+
+
 css篇
 =====
 vertical-align
@@ -72,6 +77,23 @@ onmousemove, onmouseleave 和 onmouseout 的区别。
 [参考链接](https://www.runoob.com/try/try.php?filename=tryjsref_onmousemove_leave_out)
 [参考链接](https://www.runoob.com/jsref/event-onmouseleave.html)
 
+js+canvas实现两张图片合并成一张图片的方法
+--------------------------------------
+
+[参考链接](https://www.jb51.net/article/173366.htm)
+[参考链接](http://www.divcss5.com/html5/h50912.shtml)
+[参考链接](https://www.runoob.com/html/html5-canvas.html)
+[参考链接](https://www.cnblogs.com/sunala/p/7085525.html)
+[参考链接](https://segmentfault.com/q/1010000008648867)
+[参考链接](https://www.jianshu.com/p/6fe06667b748)
+
+canvas 生成圆角
+--------------
+[参考链接](https://www.jianshu.com/p/5b0266b35b77)
+
+qrcode 使用
+----------
+[参考链接](https://www.npmjs.com/package/qrcode)
 
 js对象的深拷贝
 ------------
