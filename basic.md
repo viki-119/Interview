@@ -344,6 +344,17 @@ console.log(obj) // Uncaught ReferenceError: obj is not defined
 console.log(myObj) // {age: 12}
 ```
 
+async函数
+--------
+> async是ES2017, 是用来处理异步的
+> 语义化强
+> 里面的await只能在async函数中使用
+> await后面的语句可以是promise对象、数字、字符串等
+> async函数返回的是一个Promsie对象
+> await语句后的Promise对象变成reject状态时，那么整个async函数会中断，后面的程序不会继续执行
+
+[参考链接](https://www.jianshu.com/p/631f9406c4e0)
+
 React篇
 ========
 react-transition-group 一个官网提供的动画过度库。
@@ -464,3 +475,17 @@ linux常用命令：
 - sudo 命令 后面一定要跟绝对路径  
 - $PWD 是通配符  
 - clear: 清屏命令,不是真正意义上的清屏.  
+
+error篇
+=======
+regeneratorRuntime is not defined
+---------------------------------
+> 提示这个报错是因为使用了async/await等es7语法，需要babel进行转换
+
+ * npm i @babel/plugin-transform-runtime -D
+ * 并在.babelrc里面添加如下：{
+    ...,
+    plugins: ['@babel/plugin-transform-runtime']
+}
+
+[参考链接](https://www.cnblogs.com/musiq66/p/11186598.html)
