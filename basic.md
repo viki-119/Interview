@@ -354,6 +354,7 @@ async函数
 > await语句后的Promise对象变成reject状态时，那么整个async函数会中断，后面的程序不会继续执行
 
 [参考链接](https://www.jianshu.com/p/631f9406c4e0)
+[参考链接](http://es6.ruanyifeng.com/#docs/async)
 
 React篇
 ========
@@ -372,7 +373,7 @@ react-transition-group 一个官网提供的动画过度库。
 
 > 某些情况下可以用PureComponent提升性能(PureComponent最佳情况是展示组件)
 
-> 如果prop和state每次都会变，那么PureComponent的效率还不如Component，因为你知道的，进行浅比较也是需要时间
+> 如果prop和state每次都会变，那么PureComponent的效率还不如Component，因为进行浅比较也是需要时间
 
 > 若有shouldComponentUpdate，则执行它，若没有这个方法会判断是不是PureComponent，若是，进行浅比较
 
