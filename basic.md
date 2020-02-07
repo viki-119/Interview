@@ -1,3 +1,17 @@
+插件篇
+=====
+> editorconfig插件
+-----------------
+|属性|描述|
+----|----|
+用处|设置编码规范|
+官网|https://editorconfig.org/|
+配置文件|.editorconfig|
+备注|插件和.editorconfig配合使用才能发挥作用
+
+[参考链接](https://github.com/editorconfig/editorconfig-vscode)
+[参考链接](https://www.cnblogs.com/xiyangbaixue/p/4201490.html)
+
 dom操作
 ======
 JavaScript中textContent、innerText和innerHTML的用法以及区别
@@ -490,3 +504,23 @@ regeneratorRuntime is not defined
 }
 
 [参考链接](https://www.cnblogs.com/musiq66/p/11186598.html)
+
+stylelint篇
+==========
+[参考链接](https://segmentfault.com/a/1190000004588228)
+[参考链接](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/rules.md)
+
+```js
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-name-case": null,
+    "at-rule-no-unknown": null,
+    "no-descending-specificity": null, // 禁止特异性较低的选择器在特异性较高的选择器之后重写。
+    "no-duplicate-selectors": null, // 禁止使用重复的选择器
+    "color-hex-case": null, // 指定十六进制颜色的大小写
+    "at-rule-empty-line-before": null, // 在 AT规则 前要求或不允许留有空行。
+    "declaration-block-semicolon-newline-after": null // 在声明块的分号后指定一个换行符或禁止留有空格
+  }
+}
+```
